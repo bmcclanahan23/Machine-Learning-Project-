@@ -80,9 +80,8 @@ for driver in directories:
         measures_ranges[measures_keys[index]] = list(range(last_index,last_index+measure_dict[measures_keys[index]].shape[1]))
         last_index += measure_dict[measures_keys[index]].shape[1]
     driver_data[driver] = hstack([measure_dict[key] for key in measures_keys])
-   
-
-for driver in driver_data:    
+  
+for driver in  driver_data:    
     print 'making a 1 vs the rest data matrix for driver: ',driver 
     positive_class = driver_data[driver]
     other_drivers = []
